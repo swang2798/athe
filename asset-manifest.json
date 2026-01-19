@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/athe/static/css/main.61bfb78e.css",
+    "main.js": "/athe/static/js/main.10a21e4f.js",
+    "index.html": "/athe/index.html",
+    "main.61bfb78e.css.map": "/athe/static/css/main.61bfb78e.css.map",
+    "main.10a21e4f.js.map": "/athe/static/js/main.10a21e4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.61bfb78e.css",
+    "static/js/main.10a21e4f.js"
+  ]
+}
