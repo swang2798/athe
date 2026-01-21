@@ -17,7 +17,7 @@ body {
 }
 
 .container-wide {
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
 /* Sections */
@@ -236,67 +236,42 @@ p {
     }
 }
 
-/* Side Navigation */
+/* Navigation */
 .app-layout {
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
-.side-nav {
-    width: 200px;
+.top-nav {
     background: #f8f8f8;
-    border-right: 1px solid #eee;
-    padding: 20px 0;
-    position: fixed;
-    height: 100vh;
-    transition: width 0.2s;
-}
-
-.side-nav.collapsed {
-    width: 50px;
-}
-
-.side-nav-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #333;
-}
-
-.side-nav-header {
-    font-family: 'Playfair Display';
-    font-size: 1.5rem;
-    padding: 0 20px 20px;
     border-bottom: 1px solid #eee;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.side-nav-links {
+.top-nav-links {
     list-style: none;
-    padding: 20px 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
 }
 
-.side-nav-links a {
-    display: block;
-    padding: 10px 20px;
+.top-nav-links a {
     color: #333;
     text-decoration: none;
+    padding: 5px 0;
 }
 
-.side-nav-links a:hover,
-.side-nav-links a.active {
-    background: #eee;
+.top-nav-links a:hover,
+.top-nav-links a.active {
+    border-bottom: 2px solid #333;
 }
 
 .main-content {
     flex: 1;
-    margin-left: 200px;
-    transition: margin-left 0.2s;
-}
-
-.side-nav.collapsed + .main-content {
-    margin-left: 50px;
 }
 
 
@@ -329,4 +304,70 @@ p {
 .image-card {
     text-decoration: none;
     color: inherit;
+}
+
+
+/* Dish Page - Lookbook Style */
+.lookbook {
+    min-height: 100vh;
+}
+
+.lookbook-content {
+    padding: 80px;
+    position: fixed;
+    top: 53px;
+    left: 0;
+    width: 50%;
+    height: calc(100vh - 53px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lookbook-content > * {
+    width: 70%;
+}
+
+.lookbook-title {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 40px;
+}
+
+.lookbook-recipe h2 {
+    font-size: 1.2rem;
+    margin: 30px 0 15px;
+    font-weight: 500;
+}
+
+.lookbook-recipe ul {
+    padding-left: 20px;
+}
+
+.lookbook-recipe li {
+    margin-bottom: 8px;
+}
+
+.lookbook-recipe p {
+    line-height: 1.8;
+}
+
+.lookbook-media {
+    margin-left: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
+}
+
+.lookbook-media img,
+.lookbook-media video {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    border-radius: 12px;
 }

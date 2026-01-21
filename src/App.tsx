@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import SideNav from './components/SideNav';
+import TopNav from './components/TopNav';
 import HomePage from './pages/HomePage';
 import CafePage from './pages/CafePage';
 import CookingPage from './pages/CookingPage';
@@ -11,9 +11,9 @@ import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <div className="app-layout">
-        <SideNav />
+        <TopNav />
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HomePage />} />

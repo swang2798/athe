@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "everydayathe Cafe website built with React",
   "private": true,
-  "homepage": "https://swang2798.github.io/athe",
+  "homepage": "https://swang2798.github.io/athe/",
   "dependencies": {
+    "cloudinary-video-player": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0",
     "react-scripts": "^5.0.1",
-    "typescript": "^5.3.0"
+    "typescript": "^4.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
