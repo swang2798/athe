@@ -16,6 +16,10 @@ body {
     padding: 40px 20px;
 }
 
+.container-wide {
+    padding: 40px 20px;
+}
+
 /* Sections */
 section {
     padding: 60px 0;
@@ -230,4 +234,99 @@ p {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+}
+
+/* Side Navigation */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.side-nav {
+    width: 200px;
+    background: #f8f8f8;
+    border-right: 1px solid #eee;
+    padding: 20px 0;
+    position: fixed;
+    height: 100vh;
+    transition: width 0.2s;
+}
+
+.side-nav.collapsed {
+    width: 50px;
+}
+
+.side-nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.side-nav-header {
+    font-family: 'Playfair Display';
+    font-size: 1.5rem;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.side-nav-links {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.side-nav-links a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.side-nav-links a:hover,
+.side-nav-links a.active {
+    background: #eee;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 200px;
+    transition: margin-left 0.2s;
+}
+
+.side-nav.collapsed + .main-content {
+    margin-left: 50px;
+}
+
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image-card p {
+    margin: 5px 0 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+
+.image-card {
+    text-decoration: none;
+    color: inherit;
 }
