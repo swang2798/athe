@@ -4,11 +4,12 @@ import { dishes } from '../data/dishes';
 
 const CookingPage: React.FC = () => (
   <div className="container-wide">
-    <h1>Cooking</h1>
     <div className="image-grid">
       {dishes.map((dish) => (
         <Link key={dish.id} to={`/cooking/${dish.id}`} className="image-card">
-          <img src={dish.src} alt={dish.name}/>
+          <div className="image-card-thumb">
+            <img src={dish.src} alt={dish.name}/>
+          </div>
           <p>{dish.name}</p>
         </Link>
       ))}

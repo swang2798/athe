@@ -1,8 +1,18 @@
 import React from 'react';
 
+const text = 'EVERYDAY ATHE ';
+
 const HomePage: React.FC = () => (
-  <div className="container">
-    <h1>Welcome</h1>
+  <div className="home">
+    <div className="marquee">
+      <span>{text.repeat(10)}</span>
+    </div>
+    <div className="marquee reverse">
+      <span>{text.repeat(10)}</span>
+    </div>
+    <div className="marquee">
+      <span>{text.repeat(10)}</span>
+    </div>
   </div>
 );
 

@@ -6,8 +6,6 @@ import Food from '../components/Food';
 const CafePage: React.FC = () => (
   <>
     <div className="container">
-      <h1>athe</h1>
-      <h3>(a • th • eh)</h3>
       <Calendar />
     </div>
     <section className="menu-section">

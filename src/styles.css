@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     color: #333;
     line-height: 1.6;
 }
@@ -13,7 +13,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 0 20px;
 }
 
 .container-wide {
@@ -26,7 +26,7 @@ section {
 }
 
 h1 {
-    font-family: 'Playfair Display';
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     text-align: center;
     font-size: 2.5rem;
     font-weight: 500;
@@ -40,7 +40,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Playfair Display';
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     text-align: center;
     font-weight: 400;
 }
@@ -279,9 +279,9 @@ p {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
+    gap: 80px;
     margin-top: 30px;
-    max-width: 1400px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -300,12 +300,10 @@ p {
     color: #333;
 }
 
-
 .image-card {
     text-decoration: none;
     color: inherit;
 }
-
 
 /* Dish Page - Lookbook Style */
 .lookbook {
@@ -313,7 +311,7 @@ p {
 }
 
 .lookbook-content {
-    padding: 80px;
+    padding: 40px;
     position: fixed;
     top: 53px;
     left: 0;
@@ -333,7 +331,12 @@ p {
     font-size: 2rem;
     font-weight: 400;
     letter-spacing: 0.05em;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.lookbook-description {
+    margin-bottom: 30px;
 }
 
 .lookbook-recipe h2 {
@@ -355,19 +358,151 @@ p {
 }
 
 .lookbook-media {
-    margin-left: 50%;
+    position: fixed;
+    top: 53px;
+    right: 0;
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    height: calc(100vh - 53px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    gap: 15px;
     padding: 40px;
-    align-items: center;
+    overflow-y: auto;
+    align-content: start;
 }
 
 .lookbook-media img,
 .lookbook-media video {
     width: 100%;
-    max-width: 400px;
+    aspect-ratio: 0.9;
+    object-fit: cover;
     display: block;
     border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .lookbook {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .lookbook-content {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .lookbook-media {
+        position: static;
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        align-content: start;
+    }
+}
+
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.breadcrumbs a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-sep {
+    margin: 0 8px;
+}
+
+
+/* Hover Cat */
+.image-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.image-card-thumb {
+    position: relative;
+    line-height: 0;
+}
+
+.image-card-thumb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.image-card-thumb::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://res.cloudinary.com/dlenbkeui/image/upload/v1769062386/mew_transparent_eb9002.png') center/50% no-repeat;
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.image-card:hover .image-card-thumb::before,
+.image-card:hover .image-card-thumb::after {
+    opacity: 1;
+}
+
+
+/* Marquee */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.marquee span {
+    display: inline-block;
+    animation: marquee 40s linear infinite;
+    font-size: 15rem;
+    font-weight: 500;
+}
+
+.marquee.reverse span {
+    animation: marquee-reverse 40s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
