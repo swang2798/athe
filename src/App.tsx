@@ -7,6 +7,7 @@ import CafePage from './pages/CafePage';
 import CookingPage from './pages/CookingPage';
 import TravelPage from './pages/TravelPage';
 import FashionPage from './pages/FashionPage';
+import MusicPage from './pages/MusicPage';
 import DishPage from './pages/DishPage';
 import TripPage from './pages/TripPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/travel" element={<TravelPage/>}/>
             <Route path="/travel/:id" element={<TripPage/>}/>
             <Route path="/fashion" element={<FashionPage/>}/>
+            <Route path="/music" element={<MusicPage/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
           </Routes>
         </main>

@@ -9,38 +9,40 @@ const DishPage: React.FC = () => {
   if (!dish) return <Navigate to="/404" replace/>;
 
   return (
-    <div className="lookbook">
-      <div className="lookbook-content">
-        <h1 className="lookbook-title">{dish.name}</h1>
-        <div className="lookbook-recipe">
-          <p className="lookbook-description">{dish.overview}</p>
-          <>
-            <h2>Ingredients</h2>
-            <ul>
-              {dish.ingredients.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          </>
-          <>
-            <h2>Instructions</h2>
-            <p>{dish.instructions}</p>
-          </>
+    <div className="container-wide">
+      <div className="lookbook">
+        <div className="lookbook-content">
+          <h1 className="lookbook-title">{dish.name}</h1>
+          <div className="lookbook-recipe">
+            <p className="lookbook-description">{dish.overview}</p>
+            <>
+              <h2>Ingredients</h2>
+              <ul>
+                {dish.ingredients.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </>
+            <>
+              <h2>Instructions</h2>
+              <p>{dish.instructions}</p>
+            </>
+          </div>
         </div>
-      </div>
-      <div className="lookbook-media">
-        {dish.images?.map((src, i) => (
-          <img key={i} src={src} alt={`${dish.name} ${i + 1}`}/>
-        ))}
-        {dish.video && (
-          <video
-            src={`https://res.cloudinary.com/dlenbkeui/video/upload/q_auto:best/${dish.video}`}
-            loop
-            muted
-            autoPlay
-            playsInline
-          />
-        )}
+        <div className="lookbook-media">
+          {dish.images?.map((src, i) => (
+            <img key={i} src={src} alt={`${dish.name} ${i + 1}`}/>
+          ))}
+          {dish.video && (
+            <video
+              src={`https://res.cloudinary.com/dlenbkeui/video/upload/q_auto:best/${dish.video}`}
+              loop
+              muted
+              autoPlay
+              playsInline
+            />
+          )}
+        </div>
       </div>
     </div>
   );
