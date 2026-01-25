@@ -16,6 +16,16 @@ const DishPage: React.FC = () => {
           <div className="lookbook-recipe">
             <p className="lookbook-description">{dish.overview}</p>
             <>
+              {dish.tools && (
+                <>
+                  <h2>Tools</h2>
+                  <ul>
+                    {dish.tools.map((tool, i) => (
+                      <li key={i}>{tool}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
               <h2>Ingredients</h2>
               <ul>
                 {dish.ingredients.map((item, i) => (
