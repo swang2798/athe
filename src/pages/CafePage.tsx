@@ -2,18 +2,15 @@ import React from 'react';
 import Calendar from '../components/Calendar';
 import Drinks from '../components/Drinks';
 import Food from '../components/Food';
+import styles from './CafePage.module.css';
 
 const CafePage: React.FC = () => (
   <>
-    <div className="container">
-      <Calendar />
-    </div>
-    <section className="menu-section">
-      <div className="container">
-        <div className="menu-grid">
-          <Drinks />
-          <Food />
-        </div>
+    <Calendar />
+    <section>
+      <div className={styles.menuGrid}>
+        <Drinks />
+        <Food />
       </div>
     </section>
   </>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './Calendar.module.css';
 
 const openDates = ['2026-03-14'];
 
@@ -36,34 +37,34 @@ const Calendar: React.FC = () => {
 
   const days = [];
   for (let i = 0; i < startingDayOfWeek; i++) {
-    days.push(<div key={`empty-${i}`} className="calendar-day empty" />);
+    days.push(<div key={`empty-${i}`} className={`${styles.day} ${styles.empty}`} />);
   }
   for (let day = 1; day <= daysInMonth; day++) {
     const isOpen = isOpenDate(year, month, day);
     const isPast = isPastDate(year, month, day) && !isOpen;
     days.push(
-      <div key={formatDateKey(year, month, day)} className={`calendar-day ${isOpen ? 'open' : ''} ${isPast ? 'past' : ''}`}>
+      <div key={formatDateKey(year, month, day)} className={`${styles.day} ${isOpen ? styles.open : ''} ${isPast ? styles.past : ''} ${isOpen && isPastDate(year, month, day) ? styles.openPast : ''}`}>
         {day}
       </div>
     );
   }
 
   return (
-    <div className="calendar-widget">
-      <div className="calendar-controls">
-        <button onClick={() => setCurrentMonth(new Date(year, month - 1, 1))} className="calendar-nav">←</button>
-        <button onClick={() => setCurrentMonth(new Date(year, month + 1, 1))} className="calendar-nav">→</button>
+    <div className={styles.widget}>
+      <div className={styles.controls}>
+        <button onClick={() => setCurrentMonth(new Date(year, month - 1, 1))} className={styles.nav}>←</button>
+        <button onClick={() => setCurrentMonth(new Date(year, month + 1, 1))} className={styles.nav}>→</button>
       </div>
-      <div className="calendar-month">
+      <div className={styles.month}>
         <h3>{monthName}</h3>
-        <div className="calendar-weekdays">
+        <div className={styles.weekdays}>
           {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => <div key={d}>{d}</div>)}
         </div>
-        <div className="calendar-days">{days}</div>
+        <div className={styles.days}>{days}</div>
       </div>
-      <div className="calendar-legend">
-        <div className="legend-item">
-          <span className="legend-dot open" />
+      <div className={styles.legend}>
+        <div className={styles.legendItem}>
+          <span className={`${styles.legendDot} ${styles.legendDotOpen}`} />
           <span>Open (10 AM - 2 PM)</span>
         </div>
       </div>

@@ -1,0 +1,97 @@
+.topNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 101;
+    background: #f0eee6;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .topNav {
+        padding: 15px 20px;
+    }
+}
+
+.logo {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.linksDesktop {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.linksDesktop a {
+    color: #333;
+    text-decoration: none;
+}
+
+.linksDesktop a:hover,
+.linksDesktop a:global(.active) {
+    color: #7eb77f;
+}
+
+.toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    z-index: 99;
+}
+
+.overlay {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background: #f0eee6;
+    padding: 20px;
+    z-index: 100;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.links a:hover,
+.links a:global(.active) {
+    color: #7eb77f;
+}
+
+@media (max-width: 768px) {
+    .linksDesktop { display: none; }
+    .toggle { display: block; }
+}

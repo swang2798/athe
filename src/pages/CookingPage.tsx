@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { dishes } from '../data/dishes';
+import styles from './CookingPage.module.css';
 
 const allTags = Array.from(new Set(dishes.flatMap(d => d.tags || [])));
 
@@ -9,23 +10,23 @@ const CookingPage: React.FC = () => {
   const filtered = activeTag ? dishes.filter(d => d.tags?.includes(activeTag)) : dishes;
 
   return (
-    <div className="container-wide">
-      <div className="tags filter-tags">
+    <>
+      <div className={styles.filterTags}>
         {allTags.map(tag => (
-          <button key={tag} className={`tag ${activeTag === tag ? 'active' : ''}`} onClick={() => setActiveTag(activeTag === tag ? null : tag)}>{tag}</button>
+          <button key={tag} className={`${styles.filterTag} ${activeTag === tag ? styles.filterTagActive : ''}`} onClick={() => setActiveTag(activeTag === tag ? null : tag)}>{tag}</button>
         ))}
       </div>
-      <div className="image-grid">
+      <div className={styles.grid}>
         {filtered.map((dish) => (
-          <Link key={dish.id} to={`/cooking/${dish.id}`} className="image-card">
-            <div className="image-card-thumb">
+          <Link key={dish.id} to={`/cooking/${dish.id}`} className={styles.card}>
+            <div className={styles.thumb}>
               <img src={dish.src} alt={dish.name}/>
             </div>
             <p>{dish.name}</p>
           </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

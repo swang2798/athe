@@ -1,0 +1,29 @@
+.scatter {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.scatter img {
+    position: absolute;
+    max-width: 250px;
+    height: auto;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .scatter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+    }
+
+    .scatter img {
+        position: static;
+        transform: none !important;
+        max-width: 80%;
+    }
+}

@@ -1,0 +1,104 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 80px;
+    margin-top: 30px;
+}
+
+.grid img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #f0eee6;
+}
+
+.card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card p {
+    margin: 5px 0 0;
+    padding: 0;
+    text-align: left;
+    color: #333;
+}
+
+.thumb {
+    position: relative;
+    line-height: 0;
+}
+
+.thumb::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(126, 183, 127, 0.6);
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.thumb::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://res.cloudinary.com/dlenbkeui/image/upload/v1769062386/mew_transparent_eb9002.png') center/50% no-repeat;
+    opacity: 0;
+    transition: opacity 0.2s;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+@media (hover: hover) {
+    .card:hover .thumb::before,
+    .card:hover .thumb::after {
+        opacity: 1;
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #7eb77f;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+.filterTags {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filterTag {
+    background: #e0e0e0;
+    color: #333;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+.filterTagActive {
+    background: #7eb77f;
+    color: white;
+}

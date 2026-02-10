@@ -1,8 +1,7 @@
 import React from 'react';
 
 const FashionPage: React.FC = () => (
-  <div className="container">
-  </div>
+  <div />
 );
 
 export default FashionPage;

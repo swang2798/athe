@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './MusicPage.module.css';
 
 const MusicPage: React.FC = () => (
-  <div className="music-page">
+  <div className={styles.musicPage}>
     <iframe
       style={{ borderRadius: 20 }}
       src="https://open.spotify.com/embed/playlist/5Be40bWTfTqib2Fd5CFqF2?utm_source=generator&theme=0"

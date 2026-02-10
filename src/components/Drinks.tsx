@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Menu.module.css';
 
 interface MenuItem {
   name: string;
@@ -13,13 +14,13 @@ const drinks: MenuItem[] = [
 ];
 
 const Drinks: React.FC = () => (
-  <div id="drinks" className="menu-column">
+  <div className={styles.column}>
     <h2>Drinks</h2>
-    <div className="menu-list">
+    <div className={styles.list}>
       {drinks.map((item, index) => (
-        <div key={index} className="menu-item">
-          <span className="menu-name">{item.name}</span>
-          <span className="menu-price">{item.price}</span>
+        <div key={index} className={styles.item}>
+          <span className={styles.name}>{item.name}</span>
+          <span className={styles.price}>{item.price}</span>
         </div>
       ))}
     </div>

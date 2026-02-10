@@ -1,0 +1,12 @@
+.menuGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+@media (max-width: 768px) {
+    .menuGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
