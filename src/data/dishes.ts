@@ -42,8 +42,8 @@ export const dishes: Dish[] = [
     name: 'Iced Matcha Latte',
     tags: ['Drinks'],
     images: [
+      'https://res.cloudinary.com/dlenbkeui/image/upload/v1769366330/IMG_1503_lk9gk9.png',
       'https://res.cloudinary.com/dlenbkeui/image/upload/v1769367607/IMG_1545_thonat.png',
-      'https://res.cloudinary.com/dlenbkeui/image/upload/v1769367044/IMG_1543_hgfigz.png',
       'https://res.cloudinary.com/dlenbkeui/image/upload/v1769367215/IMG_1544_wdxbyl.png',
     ],
     video: 'IMG_1499_erxnxi',
@@ -61,4 +61,38 @@ export const dishes: Dish[] = [
       'Whisk the matcha slowly until it turns into a dark green paste. Continue adding water until the total weight is 40 g. Whisk the matcha in an up and down motion using your wrist, moving side to side until foam forms. ' +
       'Fill a glass with ice and your choice of milk. Pour the matcha into the glass. Add 1 tsp of sweetener if desired. Mix and drink immediately.',
   },
+  {
+    id: 'cola-ribs',
+    src: 'https://res.cloudinary.com/dlenbkeui/image/upload/v1771385635/IMG_1662_ko18z7.jpg',
+    name: 'Cola and Soy Glazed Ribs',
+    tags: ['Dinner'],
+    images: [
+      'https://res.cloudinary.com/dlenbkeui/image/upload/v1771385635/IMG_1662_ko18z7.jpg',
+      'https://res.cloudinary.com/dlenbkeui/image/upload/v1771385634/IMG_1657_uzrlmv.jpg',
+      'https://res.cloudinary.com/dlenbkeui/image/upload/v1771385637/IMG_1658_qbcsqb.jpg',
+    ],
+    video: 'IMG_1659_rgjdbw',
+    overview: 'Credits to Frankie Gaw for the recipe idea.',
+    ingredients: [
+      '2 tbsp light brown sugar',
+      '2 tbsp granulated or cane sugar',
+      '2 tsp smoked paprika',
+      '1 tbsp flaky salt',
+      '1 tsp onion powder',
+      '1 tsp black pepper',
+      '2 tsp garlic powder',
+      '2 tbps soy sauce',
+      '2 tsp honey',
+      '2 tsp rice vinegar',
+      '1 cup Cola',
+      '1 lbs baby back ribs or St. Louis ribs'
+    ],
+    instructions: 'First, prep the dry rub. In a large mixing bowl, combine the brown sugar, cane sugar, paprika, salt, ' +
+      'onion powder, black pepper, and garlic powder. Add the ribs into the dry rub and mix thoroughly with you hands to ensure the meat is ' +
+      'completely covered in the seasoning. Cover the bowl and let is rest in the fridge for 30 minutes. Preheat the oven to 275°F. In ' +
+      'a Dutch oven, combine the soy sauce, honey, rcie vinegar, and cola. Take the ribs out of the fridge and add them in. Place the pot in ' +
+      'the oven and roast for at least 1.5 to 2.5 hours. Depending on your oven, it may take longer or shorter so be sure to check every 30 minutes or so. ' +
+      'Once done, transfer to a serving bowl and enjoy with a side of white rice.',
+  },
+
 ];
