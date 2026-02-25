@@ -9,7 +9,6 @@
     width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
-    border-radius: 20px;
     background: #f0eee6;
 }
 
@@ -40,7 +39,6 @@
     background: rgba(126, 183, 127, 0.6);
     opacity: 0;
     transition: opacity 0.2s;
-    border-radius: 20px;
     pointer-events: none;
 }
 
@@ -54,7 +52,6 @@
     background: url('https://res.cloudinary.com/dlenbkeui/image/upload/v1769062386/mew_transparent_eb9002.png') center/50% no-repeat;
     opacity: 0;
     transition: opacity 0.2s;
-    border-radius: 20px;
     pointer-events: none;
 }
 

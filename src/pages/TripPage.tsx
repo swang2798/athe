@@ -3,18 +3,27 @@ import { useParams, Navigate } from 'react-router-dom';
 import { trips, Spot } from '../data/trips';
 import styles from './TripPage.module.css';
 
-const SpotGrid: React.FC<{ spots: Spot[] }> = ({ spots }) => (
-  <div className={styles.spotGrid}>
-    {spots.map((spot, i) => (
-      <div key={i} className={styles.spot}>
-        {spot.src && <img src={spot.src} alt={spot.name} className={styles.spotImage} />}
-        <p className={styles.spotName}>{spot.name}</p>
-        {spot.area && <p className={styles.spotArea}>{spot.area}</p>}
-        {spot.note && <p className={styles.spotNote}>{spot.note}</p>}
-      </div>
-    ))}
-  </div>
-);
+const SpotGrid: React.FC<{ spots: Spot[] }> = ({ spots }) => {
+  const cols: Spot[][] = [[], [], []];
+  spots.forEach((spot, i) => cols[i % 3].push(spot));
+
+  return (
+    <div className={styles.spotGrid}>
+      {cols.map((col, ci) => (
+        <div key={ci} className={styles.spotColumn}>
+          {col.map((spot, i) => (
+            <div key={i} className={styles.spot}>
+              {spot.src && <img src={spot.src} alt={spot.name} className={`${styles.spotImage} ${spot.orientation === 'landscape' ? styles.landscape : ''}`} />}
+              <p className={styles.spotName}>{spot.name}</p>
+              {spot.area && <p className={styles.spotArea}>{spot.area}</p>}
+              {spot.note && <p className={styles.spotNote}>{spot.note}</p>}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 const TripPage: React.FC = () => {
   const { id } = useParams();

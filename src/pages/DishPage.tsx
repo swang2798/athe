@@ -11,37 +11,42 @@ const DishPage: React.FC = () => {
 
   return (
     <div className={styles.lookbook}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>{dish.name}</h1>
-        <div className={styles.recipe}>
+      <div className={styles.top}>
+        <div className={styles.info}>
+          <h1 className={styles.title}>{dish.name}</h1>
           <p className={styles.description}>{dish.overview}</p>
-          <>
-            {dish.tools && (
-              <>
-                <h2>Tools</h2>
-                <ul>
-                  {dish.tools.map((tool, i) => (
-                    <li key={i}>{tool}</li>
-                  ))}
-                </ul>
-              </>
-            )}
-            <h2>Ingredients</h2>
-            <ul>
-              {dish.ingredients.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
-          </>
-          <>
-            <h2>Instructions</h2>
-            <p>{dish.instructions}</p>
-          </>
+          {dish.tools && (
+            <>
+              <h2>Tools</h2>
+              <ul>
+                {dish.tools.map((tool, i) => (
+                  <li key={i}>{tool}</li>
+                ))}
+              </ul>
+            </>
+          )}
+          <h2>Ingredients</h2>
+          <ul>
+            {dish.ingredients.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        {dish.images?.[0] && (
+          <div className={styles.hero}>
+            <img src={dish.images[0]} alt={`${dish.name} 1`}/>
+          </div>
+        )}
+      </div>
+      <div className={styles.content}>
+        <div className={styles.recipe}>
+          <h2>Instructions</h2>
+          <p>{dish.instructions}</p>
         </div>
       </div>
       <div className={styles.media}>
-        {dish.images?.map((src, i) => (
-          <img key={i} src={src} alt={`${dish.name} ${i + 1}`}/>
+        {dish.images?.slice(1).map((src, i) => (
+          <img key={i} src={src} alt={`${dish.name} ${i + 2}`}/>
         ))}
         {dish.video && (
           <video
