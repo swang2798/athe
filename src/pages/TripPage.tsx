@@ -1,7 +1,7 @@
-import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import { trips, Spot } from '../data/trips';
-import styles from './TripPage.module.css';
+import React from "react";
+import { useParams, Navigate } from "react-router-dom";
+import { trips, Spot } from "../data/trips";
+import styles from "./TripPage.module.css";
 
 const SpotGrid: React.FC<{ spots: Spot[] }> = ({ spots }) => {
   const cols: Spot[][] = [[], [], []];
@@ -13,7 +13,13 @@ const SpotGrid: React.FC<{ spots: Spot[] }> = ({ spots }) => {
         <div key={ci} className={styles.spotColumn}>
           {col.map((spot, i) => (
             <div key={i} className={styles.spot}>
-              {spot.src && <img src={spot.src} alt={spot.name} className={`${styles.spotImage} ${spot.orientation === 'landscape' ? styles.landscape : ''}`} />}
+              {spot.src && (
+                <img
+                  src={spot.src}
+                  alt={spot.name}
+                  className={`${styles.spotImage} ${spot.orientation === "landscape" ? styles.landscape : ""}`}
+                />
+              )}
               <p className={styles.spotName}>{spot.name}</p>
               {spot.area && <p className={styles.spotArea}>{spot.area}</p>}
               {spot.note && <p className={styles.spotNote}>{spot.note}</p>}
@@ -27,7 +33,7 @@ const SpotGrid: React.FC<{ spots: Spot[] }> = ({ spots }) => {
 
 const TripPage: React.FC = () => {
   const { id } = useParams();
-  const trip = trips.find(t => t.id === id);
+  const trip = trips.find((t) => t.id === id);
 
   if (!trip) return <Navigate to="/404" replace />;
 
@@ -57,14 +63,10 @@ const TripPage: React.FC = () => {
         </div>
       )}
 
-      {trip.tips && trip.tips.length > 0 && (
+      {trip.places && trip.places.length > 0 && (
         <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>Tips</h2>
-          <ul className={styles.tips}>
-            {trip.tips.map((tip, i) => (
-              <li key={i} className={styles.tip}>{tip}</li>
-            ))}
-          </ul>
+          <h2 className={styles.sectionTitle}>Places</h2>
+          <SpotGrid spots={trip.places} />
         </div>
       )}
     </div>
