@@ -35,7 +35,7 @@ export const trips: Trip[] = [
         name: "Sushi Dai",
         area: "Toyosu Fish Market, Tokyo",
         note: `Located at the fish market, the best omakase you'll ever have. Only $40. Line up at 4 AM.`,
-        src: "https://res.cloudinary.com/dlenbkeui/image/upload/v1772059763/IMG_2324_a5eazs.jpg",
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772141841/iffy_vh9xen.mp4",
         orientation: "landscape",
       },
       {
@@ -43,6 +43,20 @@ export const trips: Trip[] = [
         area: "Chiyoda City, Tokyo",
         note: "Enjoy delicious, fatty eel served as Hitsumabushi (served over rice in a wooden bowl with green tea poured over)",
         src: "https://res.cloudinary.com/dlenbkeui/image/upload/v1772060204/IMG_2246_lwzukd.jpg",
+      },
+      {
+        name: "Shimokita SABA Shokudo Sasuke Sakaba",
+        area: "Tokyo",
+        note: "Fresh Saba dishes directly from Toyosu Market. Lunch sets and izakaya at night.",
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772171724/IMG_2634_cfrcks.jpg",
+        orientation: "landscape",
+      },
+      {
+        name: "Nakajima Tea House",
+        area: "Hamarikyu Gardens, Tokyo",
+        note: "Beautiful authentic and traditional matcha and a perfect, serene way to start your day and located inside the beautiful Hamarikyu Gardens.",
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772170874/iffy-2_mybyew.mp4",
+        orientation: "landscape",
       },
       {
         name: "Parfaiteria beL",
@@ -86,11 +100,24 @@ export const trips: Trip[] = [
         orientation: "landscape",
       },
       {
+        name: "% ARABICA Kyoto Arashiyama",
+        area: "Kyoto",
+        note: "Get an amazing view with your famous coffee.",
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772133744/Untitled_cxhzle.mp4",
+        orientation: "landscape",
+      },
+      {
         name: "Kagawa-udon Kitashinchi",
         area: "Osaka",
         note: "Classic udon joint in Kitashinchi. Ramen is overrated, eat this instead. They hand make the udon in front of you. Super cheap, flavorful, and best udon we've had.",
         src: "https://res.cloudinary.com/dlenbkeui/video/upload/v1772064362/Untitled-2_yswhab.mp4",
         orientation: "landscape",
+      },
+      {
+        name: "Tsurara (Kakigori)",
+        area: "Kyoto",
+        note: "They are known for premium, artistic, and seasonal, limited-time offerings (e.g., cherry blossom season). Very beautiful and unique.",
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772171969/IMG_3050_ps24xp.jpg",
       },
     ],
     attractions: [
@@ -138,6 +165,7 @@ export const trips: Trip[] = [
         name: "Suga Shrine",
         area: "Tokyo",
         note: 'You can re-live the last and the most important scene from the Japanese animation film, "Your Name" here.',
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772076992/IMG_2593_pwowso.jpg",
       },
 
       {
@@ -150,7 +178,8 @@ export const trips: Trip[] = [
         name: "Arashiyama Bamboo Grove",
         area: "Kyoto",
         note: "Renowned bamboo grove featuring a picturesque pathway that winds through towering bamboo stalks, creating an otherworldly atmosphere. Best early morning. Combine with the monkey park nearby.",
-        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1771747190/IMG_8338_wtho1w.jpg",
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772134360/Untitled_bythgj.mp4",
+        orientation: "landscape",
       },
       {
         name: "Kinkaku-ju",
@@ -203,10 +232,46 @@ export const trips: Trip[] = [
     ],
     places: [
       {
-        name: "7/11",
-        area: "Everywhere",
-        note: `Once you try them in Japan, you'll wish we had them in the States.`,
-        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772058666/IMG_3214_eixwwf.mov",
+        name: "Assort Tokyo",
+        area: "Tokyo",
+        note: `Super cool English speaking hairstylists. They give amazing haircuts. We went to their Tokyo location.`,
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772077559/Untitled-3_lrrlze.mp4",
+        orientation: "landscape",
+      },
+      {
+        name: "Tokyo Character Street",
+        area: "Tokyo",
+        note: `With 21 stores featuring animated media stars from Miffy to Pokémon to Moomin, Tokyo Character Street in Tokyo Station is heaven if you love cartoons or cute stuff!`,
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772135097/Untitled_sin134.mp4",
+        orientation: "landscape",
+      },
+      {
+        name: "Tsutaya Books Daikanyama",
+        area: "Tokyo",
+        note: `Iconic and beautiful bookstore with an amazing atmosphere. You could spend forever in here if you're a book fan.`,
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772175121/Daikanyama_T-Site_Building_3_2018_qrqhgg.jpg",
+        orientation: "landscape",
+      },
+      {
+        name: "MEGA Don Quijote",
+        area: "Tokyo",
+        note: "A massive, multi-story discount store known for its huge selection of souvenirs, cosmetics, electronics, costumes, and unique Japanese goods.",
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772175221/IMG_2542_wfwrcy.jpg",
+        orientation: "landscape",
+      },
+      {
+        name: "Trefac Style Shimokitazawa",
+        area: "Shimokitazawa, Setagaya (Close to Tokyo)",
+        note: `Shimokitazawa is great if you're into thrifting. This store had so many great peices and tax free. Another great one in Shibuya is CHICAGO.`,
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772173283/thrift_jtu8xu.jpg",
+        orientation: "landscape",
+      },
+      {
+        name: "Kamakura",
+        area: "Kamakura, Kanagawa (about 1.5 hours from Tokyo)",
+        note: `Shimokitazawa is great if you're into thrifting. This store had so many great peices and tax free. Another great one in Shibuya is CHICAGO.`,
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/v1772174550/Untitled-2_rginyv.mp4",
+        orientation: "landscape",
       },
     ],
   },
@@ -214,6 +279,97 @@ export const trips: Trip[] = [
     id: "taiwan",
     src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1769064042/IMG_0543_d2itnb.jpg",
     name: "Taiwan",
+    overview:
+      "Two weeks across Tokyo, Kyoto, and Osaka. A mix of temples, street food, and hidden cafes.",
+    food: [
+      {
+        name: "7/11",
+        area: "Everywhere",
+        note: `Once you try them in Japan, you'll wish we had them in the States.`,
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/v1772058666/IMG_3214_eixwwf.mov",
+      },
+      {
+        name: "Kagawa-udon Kitashinchi",
+        area: "Osaka",
+        note: "Classic udon joint in Kitashinchi. Ramen is overrated, eat this instead. They hand make the udon in front of you. Super cheap, flavorful, and best udon we've had.",
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/v1772064362/Untitled-2_yswhab.mp4",
+        orientation: "landscape",
+      },
+      {
+        name: "Tsurara (Kakigori)",
+        area: "Kyoto",
+        note: "They are known for premium, artistic, and seasonal, limited-time offerings (e.g., cherry blossom season). Very beautiful and unique.",
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772171969/IMG_3050_ps24xp.jpg",
+      },
+    ],
+    attractions: [
+      {
+        name: "Shinjuku Gyoen National Garden",
+        area: "Tokyo",
+        note: "Huge public garden with spacious lawns spacious lawns, meandering walking paths and tranquil scenery that provide a relaxing escape from the typical busy streets of Tokyo. Go to the Starbucks while you're there.",
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/v1771728165/IMG_8020_tahy1j.jpg",
+        orientation: "landscape",
+      },
+      {
+        name: "Shibuya Crossing",
+        area: "Tokyo",
+        note: "Very popular photo op destination. Described as the world's busiest pedestrian crossing, with as many as 3,000 people crossing during a single green light cycle.",
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/v1769046609/IMG_7909_h8dyuh.jpg",
+        orientation: "landscape",
+      },
+      {
+        name: "DiverCity Tokyo Plaza",
+        area: "Odaiba, Tokyo",
+        note: "Huge mall with a Gundam Base store. Also has a life-sized Gundam statue outside. A must go for Gundam fans.",
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/v1769063916/IMG_8006_zd0zer.jpg",
+      },
+      {
+        name: "Osaka Aquarium Kaiyukan",
+        area: "Osaka",
+        note: "One of the largest aquariums globally, featuring diverse marine life from Arctic to tropical regions. Can see a whale shark :O",
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772062568/IMG_3144_fww7yj.mp4",
+      },
+    ],
+    stays: [
+      {
+        name: "APA Hotel Pride Kokkaigijidomae",
+        area: "Tokyo",
+        note: "Minimal and clean. A good location for exploring as its close to the station.",
+      },
+      {
+        name: "Kyoto Arashiyama Onsen Kadensho",
+        area: "Kyoto",
+        note: "A must stay in Kyoto. Reasonable priced and has multiple private onsens that you'll probably use every night.",
+      },
+      {
+        name: "Villa Fontaine Grand Osaka-Umeda",
+        area: "Osaka",
+        note: "4-star hotel located in the heart of Osaka, within walking distance of several temples and other attractions.",
+      },
+    ],
+    places: [
+      {
+        name: "Assort Tokyo",
+        area: "Tokyo",
+        note: `Super cool English speaking hairstylists. They give amazing haircuts. We went to their Tokyo location.`,
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772077559/Untitled-3_lrrlze.mp4",
+        orientation: "landscape",
+      },
+      {
+        name: "Trefac Style Shimokitazawa",
+        area: "Shimokitazawa, Setagaya (Close to Tokyo)",
+        note: `Shimokitazawa is great if you're into thrifting. This store had so many great peices and tax free. Another great one in Shibuya is CHICAGO.`,
+        src: "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1772173283/thrift_jtu8xu.jpg",
+        orientation: "landscape",
+      },
+      {
+        name: "Kamakura",
+        area: "Kamakura, Kanagawa (about 1.5 hours from Tokyo)",
+        note: `Shimokitazawa is great if you're into thrifting. This store had so many great peices and tax free. Another great one in Shibuya is CHICAGO.`,
+        src: "https://res.cloudinary.com/dlenbkeui/video/upload/v1772174550/Untitled-2_rginyv.mp4",
+        orientation: "landscape",
+      },
+    ],
   },
   {
     id: "korea",
