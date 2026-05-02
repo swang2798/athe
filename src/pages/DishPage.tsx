@@ -3,6 +3,8 @@ import { useParams, Navigate } from 'react-router-dom';
 import { dishes } from '../data/dishes';
 import styles from './DishPage.module.css';
 
+const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
+
 const DishPage: React.FC = () => {
   const {id} = useParams();
   const dish = dishes.find(d => d.id === id);
@@ -34,7 +36,11 @@ const DishPage: React.FC = () => {
         </div>
         {dish.images?.[0] && (
           <div className={styles.hero}>
-            <img src={dish.images[0]} alt={`${dish.name} 1`}/>
+            {isVideo(dish.images[0]) ? (
+              <video src={dish.images[0]} loop muted autoPlay playsInline />
+            ) : (
+              <img src={dish.images[0]} alt={`${dish.name} 1`}/>
+            )}
           </div>
         )}
       </div>
@@ -45,12 +51,16 @@ const DishPage: React.FC = () => {
         </div>
       </div>
       <div className={styles.media}>
-        {dish.images?.slice(1).map((src, i) => (
-          <img key={i} src={src} alt={`${dish.name} ${i + 2}`}/>
-        ))}
+        {dish.images?.slice(1).map((src, i) =>
+          isVideo(src) ? (
+            <video key={i} src={src} loop muted autoPlay playsInline />
+          ) : (
+            <img key={i} src={src} alt={`${dish.name} ${i + 2}`}/>
+          )
+        )}
         {dish.video && (
           <video
-            src={`https://res.cloudinary.com/dlenbkeui/video/upload/q_auto:best/${dish.video}`}
+            src={dish.video}
             loop
             muted
             autoPlay

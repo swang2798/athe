@@ -3,6 +3,15 @@ import { useParams, Navigate } from "react-router-dom";
 import { trips, Spot } from "../data/trips";
 import styles from "./TripPage.module.css";
 
+const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
+
+const Media: React.FC<{ src: string; alt: string; className?: string }> = ({ src, alt, className }) =>
+  isVideo(src) ? (
+    <video src={src} className={className} loop muted autoPlay playsInline />
+  ) : (
+    <img src={src} alt={alt} className={className} />
+  );
+
 const SpotGrid: React.FC<{ spots: Spot[] }> = ({ spots }) => {
   const cols: Spot[][] = [[], [], []];
   spots.forEach((spot, i) => cols[i % 3].push(spot));
@@ -14,7 +23,7 @@ const SpotGrid: React.FC<{ spots: Spot[] }> = ({ spots }) => {
           {col.map((spot, i) => (
             <div key={i} className={styles.spot}>
               {spot.src && (
-                <img
+                <Media
                   src={spot.src}
                   alt={spot.name}
                   className={`${styles.spotImage} ${spot.orientation === "landscape" ? styles.landscape : ""}`}
@@ -56,17 +65,17 @@ const TripPage: React.FC = () => {
         </div>
       )}
 
-      {trip.stays && trip.stays.length > 0 && (
-        <div className={styles.section}>
-          <h2 className={styles.sectionTitle}>Stays</h2>
-          <SpotGrid spots={trip.stays} />
-        </div>
-      )}
-
       {trip.places && trip.places.length > 0 && (
         <div className={styles.section}>
           <h2 className={styles.sectionTitle}>Places</h2>
           <SpotGrid spots={trip.places} />
+        </div>
+      )}
+
+      {trip.stays && trip.stays.length > 0 && (
+        <div className={styles.section}>
+          <h2 className={styles.sectionTitle}>Stays</h2>
+          <SpotGrid spots={trip.stays} />
         </div>
       )}
     </div>

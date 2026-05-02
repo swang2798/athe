@@ -5,7 +5,6 @@
   "private": true,
   "homepage": "https://swang2798.github.io/athe/",
   "dependencies": {
-    "cloudinary-video-player": "^3.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0",

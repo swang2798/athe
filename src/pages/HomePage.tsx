@@ -2,10 +2,10 @@ import React, { useState, useMemo, useRef, useCallback } from 'react';
 import styles from './HomePage.module.css';
 
 const images = [
-  'https://res.cloudinary.com/dlenbkeui/image/upload/v1769138292/Scanned_Document-1_mopo3y.png',
-  'https://res.cloudinary.com/dlenbkeui/image/upload/v1769138298/Scanned_Document-6_y9ldfp.png',
-  'https://res.cloudinary.com/dlenbkeui/image/upload/v1769138296/Scanned_Document-4_wdprlh.png',
-  'https://res.cloudinary.com/dlenbkeui/image/upload/v1769138294/Scanned_Document-3_coyybw.png',
+  'https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-1.png',
+  'https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-2.png',
+  'https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-3.png',
+  'https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-4.png',
 ];
 
 const HomePage: React.FC = () => {

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { dishes } from '../data/dishes';
 import styles from './CookingPage.module.css';
 
+const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src);
+
 const allTags = Array.from(new Set(dishes.flatMap(d => d.tags || [])));
 
 const CookingPage: React.FC = () => {
@@ -20,7 +22,11 @@ const CookingPage: React.FC = () => {
         {filtered.map((dish) => (
           <Link key={dish.id} to={`/cooking/${dish.id}`} className={styles.card}>
             <div className={styles.thumb}>
-              <img src={dish.src} alt={dish.name}/>
+              {isVideo(dish.src) ? (
+                <video src={dish.src} loop muted autoPlay playsInline />
+              ) : (
+                <img src={dish.src} alt={dish.name}/>
+              )}
             </div>
             <p>{dish.name}</p>
           </Link>

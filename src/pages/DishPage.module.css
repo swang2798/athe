@@ -35,7 +35,8 @@
     flex-shrink: 0;
 }
 
-.hero img {
+.hero img,
+.hero video {
     width: 500px;
     aspect-ratio: 3/4;
     object-fit: cover;
@@ -102,7 +103,8 @@
         max-width: 100%;
     }
 
-    .hero img {
+    .hero img,
+    .hero video {
         width: 100%;
     }
 

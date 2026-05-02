@@ -14,15 +14,15 @@ export interface Dish {
 export const dishes: Dish[] = [
   {
     id: "steamed-egg-with-minced-pork",
-    src: "https://res.cloudinary.com/dlenbkeui/image/upload/v1768971060/IMG_1477_hrzuvg.jpg",
+    src: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/thumb.jpg",
     name: "Steamed Egg with Minced Pork",
     tags: ["Dinner", "Lunch"],
     images: [
-      "https://res.cloudinary.com/dlenbkeui/image/upload/q_100/v1768971060/IMG_1477_hrzuvg.jpg",
-      "https://res.cloudinary.com/dlenbkeui/image/upload/q_100/v1768973028/IMG_1474_denobs.jpg",
-      "https://res.cloudinary.com/dlenbkeui/image/upload/q_100/v1768973029/IMG_1475_qnardv.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/thumb.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/2.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/3.jpg",
     ],
-    video: "IMG_1476_kzhbja",
+    video: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/video.mp4",
     overview:
       "Probably my favorite dish growing up. My family and I would eat this like 2-3 times a week.",
     ingredients: [
@@ -40,16 +40,16 @@ export const dishes: Dish[] = [
   },
   {
     id: "iced-matcha-latte",
-    src: "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772075434/IMG_1734_zav0gc.mov",
+    src: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/thumb.mp4",
     name: "Iced Matcha Latte",
     tags: ["Drinks"],
     images: [
-      "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772075434/IMG_1734_zav0gc.mov",
-      "https://res.cloudinary.com/dlenbkeui/image/upload/q_auto/v1769367607/IMG_1545_thonat.png",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/thumb.mp4",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/2.png",
       //"https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772075787/IMG_1731_n5t9d2.mov",
-      "https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1769366609/IMG_1499_erxnxi.mov",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/3.mp4",
     ],
-    video: "Untitled-2_is5sof",
+    video: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/video.mp4",
     overview:
       "For matcha, we recommend using either Jugetsudo, Mizuba Daily, Rocky's or Marukyu Koyamaen.",
     ingredients: [
@@ -75,15 +75,15 @@ export const dishes: Dish[] = [
   },
   {
     id: "cola-ribs",
-    src: "https://res.cloudinary.com/dlenbkeui/image/upload/v1771385635/IMG_1662_ko18z7.jpg",
+    src: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/thumb.jpg",
     name: "Cola and Soy Glazed Ribs",
     tags: ["Dinner"],
     images: [
-      "https://res.cloudinary.com/dlenbkeui/image/upload/v1771385635/IMG_1662_ko18z7.jpg",
-      "https://res.cloudinary.com/dlenbkeui/image/upload/v1771385634/IMG_1657_uzrlmv.jpg",
-      "https://res.cloudinary.com/dlenbkeui/image/upload/v1771385637/IMG_1658_qbcsqb.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/thumb.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/2.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/3.jpg",
     ],
-    video: "IMG_1659_rgjdbw",
+    video: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/video.mp4",
     overview: "Credits to Frankie Gaw for the recipe idea.",
     ingredients: [
       "2 tbsp light brown sugar",
