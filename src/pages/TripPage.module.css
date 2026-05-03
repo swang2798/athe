@@ -34,50 +34,75 @@
 .spotGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 24px;
 }
 
 .spotColumn {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .spot {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    background: #faf9f6;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+}
+
+.spot:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .spotImage {
     width: 100%;
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/3;
     object-fit: cover;
     background: #f0eee6;
+    display: block;
+}
+
+.portrait {
+    aspect-ratio: 3/4;
 }
 
 .landscape {
     aspect-ratio: 4/3;
 }
 
+.spotText {
+    padding: 14px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .spotName {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: #333;
     margin: 0;
 }
 
 .spotArea {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #999;
     margin: 0;
 }
 
 .spotNote {
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 0.85rem;
+    color: #666;
     line-height: 1.5;
-    margin: 0;
+    margin: 6px 0 0;
+}
+
+/* Spots without media (e.g. stays) */
+.spotNoMedia {
+    padding-top: 18px;
 }
 
 .tips {
@@ -101,4 +126,150 @@
     position: absolute;
     left: 0;
     color: #7eb77f;
+}
+
+/* Mobile masonry (hidden on desktop) */
+.spotMasonry {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .spotGrid {
+        display: none;
+    }
+
+    .spotMasonry {
+        display: flex;
+        gap: 10px;
+    }
+
+    .spotMasonryCol {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .spotCard {
+        background: #faf9f6;
+        overflow: hidden;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .spotCardImage {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+        background: #f0eee6;
+    }
+
+    .spotCardPortrait {
+        aspect-ratio: 3/4;
+    }
+
+    .spotArea,
+    .spotNote {
+        display: none;
+    }
+
+    .spotName {
+        font-size: 0.85rem;
+    }
+
+    .lightboxInfoMobile {
+        display: flex;
+    }
+}
+
+/* Clickable media */
+.clickable {
+    cursor: pointer;
+}
+
+/* Lightbox */
+.lightboxBackdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.25s ease;
+}
+
+.lightboxContent {
+    max-width: 90vw;
+    max-height: 90vh;
+    background: transparent;
+    overflow: hidden;
+    animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightboxMedia,
+.lightboxVideo {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+}
+
+.lightboxInfo {
+    padding: 16px 20px;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+.lightboxInfoMobile {
+    padding: 16px 20px;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    box-sizing: border-box;
+}
+
+.lightboxName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.lightboxArea {
+    font-size: 0.85rem;
+    color: #999;
+    margin: 0;
+}
+
+.lightboxNote {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 4px 0 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
