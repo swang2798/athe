@@ -22,7 +22,7 @@
     margin: 5px 0 0;
     padding: 0;
     text-align: left;
-    color: #333;
+    color: #2a5435;
 }
 
 .thumb {
@@ -88,7 +88,7 @@
 
 .filterTag {
     background: #e0e0e0;
-    color: #333;
+    color: #2a5435;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.75rem;

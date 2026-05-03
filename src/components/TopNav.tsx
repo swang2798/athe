@@ -7,8 +7,8 @@ const TopNav: React.FC = () => {
 
   return (
     <nav className={styles.topNav}>
-      <NavLink to="/" className={styles.logo}>a•th•eh</NavLink>
       <ul className={styles.linksDesktop}>
+        <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/cafe">Cafe</NavLink></li>
         <li><NavLink to="/cooking">Cooking</NavLink></li>
         <li><NavLink to="/travel">Travel</NavLink></li>
