@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import styles from './Breadcrumbs.module.css';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import styles from "./Breadcrumbs.module.css";
 
 const Breadcrumbs: React.FC = () => {
   const location = useLocation();
-  const paths = location.pathname.split('/').filter(Boolean);
+  const paths = location.pathname.split("/").filter(Boolean);
 
   if (paths.length === 0) return null;
 
@@ -15,9 +15,9 @@ const Breadcrumbs: React.FC = () => {
         <span key={path}>
           <span className={styles.sep}>/</span>
           {i === paths.length - 1 ? (
-            <span>{path.replace(/-/g, ' ')}</span>
+            <span>{path.replace(/-/g, " ")}</span>
           ) : (
-            <Link to={`/${paths.slice(0, i + 1).join('/')}`}>{path}</Link>
+            <Link to={`/${paths.slice(0, i + 1).join("/")}`}>{path}</Link>
           )}
         </span>
       ))}

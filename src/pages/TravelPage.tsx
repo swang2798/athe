@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { trips } from '../data/trips';
-import styles from './CookingPage.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { trips } from "../data/trips";
+import styles from "./styles/CookingPage.module.css";
 
 const TravelPage: React.FC = () => (
   <div className={styles.grid}>

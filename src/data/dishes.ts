@@ -22,7 +22,8 @@ export const dishes: Dish[] = [
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/2.jpg",
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/3.jpg",
     ],
-    video: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/video.mp4",
+    video:
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/video.mp4",
     overview:
       "Probably my favorite dish growing up. My family and I would eat this like 2-3 times a week.",
     ingredients: [
@@ -49,7 +50,8 @@ export const dishes: Dish[] = [
       //"https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772075787/IMG_1731_n5t9d2.mov",
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/3.mp4",
     ],
-    video: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/video.mp4",
+    video:
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/video.mp4",
     overview:
       "For matcha, we recommend using either Jugetsudo, Mizuba Daily, Rocky's or Marukyu Koyamaen.",
     ingredients: [
@@ -83,7 +85,8 @@ export const dishes: Dish[] = [
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/2.jpg",
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/3.jpg",
     ],
-    video: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/video.mp4",
+    video:
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/video.mp4",
     overview: "Credits to Frankie Gaw for the recipe idea.",
     ingredients: [
       "2 tbsp light brown sugar",

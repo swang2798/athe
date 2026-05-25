@@ -1,25 +1,25 @@
 .banner {
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #eee;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
 }
 
 .date {
-    font-size: 1.15rem;
-    color: #2a5435;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+  font-size: 1.15rem;
+  color: #2a5435;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #7eb77f;
-    display: inline-block;
-    flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7eb77f;
+  display: inline-block;
+  flex-shrink: 0;
 }

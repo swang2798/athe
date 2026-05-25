@@ -1,95 +1,105 @@
 .topNav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 40px;
-    z-index: 101;
-    background: #f0eee6;
-    max-width: 1500px;
-    margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 101;
+  background: transparent;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-    .topNav {
-        padding: 15px 20px;
-    }
+  .topNav {
+    padding: 15px 20px;
+  }
 }
 
 .logo {
-    font-size: 1.6rem;
-    color: #2a5435;
-    text-decoration: none;
+  font-size: 1.6rem;
+  color: #2a5435;
+  text-decoration: none;
 }
 
 .linksDesktop {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+  list-style: none;
+  display: flex;
+  gap: 30px;
 }
 
 .linksDesktop a {
-    color: #2a5435;
-    text-decoration: none;
-    font-size: 1.6rem;
+  color: #2a5435;
+  text-decoration: none;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 400;
 }
 
 .linksDesktop a:hover,
 .linksDesktop a:global(.active) {
-    color: #7eb77f;
+  color: #7eb77f;
 }
 
 .toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    backdrop-filter: blur(5px);
-    z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  z-index: 99;
 }
 
 .overlay {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    right: 0;
-    background: #f0eee6;
-    padding: 20px;
-    z-index: 100;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  background: #f0eee6;
+  padding: 20px;
+  z-index: 100;
 }
 
 .links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .links a {
-    color: #2a5435;
-    text-decoration: none;
-    font-size: 1.2rem;
+  color: #2a5435;
+  text-decoration: none;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 400;
 }
 
 .links a:hover,
 .links a:global(.active) {
-    color: #7eb77f;
+  color: #7eb77f;
 }
 
 @media (max-width: 768px) {
-    .linksDesktop { display: none; }
-    .toggle { display: block; }
+  .linksDesktop {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
 }

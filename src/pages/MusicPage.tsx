@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './MusicPage.module.css';
+import React from "react";
+import styles from "./styles/MusicPage.module.css";
 
 const MusicPage: React.FC = () => (
   <div className={styles.musicPage}>

@@ -1,15 +1,15 @@
-import React from 'react';
-import styles from './Calendar.module.css';
+import React from "react";
+import styles from "./Calendar.module.css";
 
-const openDates = [''];
-const hours = '10 AM – 2 PM';
+const openDates = [""];
+const hours = "10 AM – 2 PM";
 
 const formatDate = (dateStr: string) => {
-  const date = new Date(dateStr + 'T00:00:00');
-  return date.toLocaleDateString('en-US', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric',
+  const date = new Date(dateStr + "T00:00:00");
+  return date.toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
   });
 };
 
@@ -18,7 +18,7 @@ const Calendar: React.FC = () => {
   today.setHours(0, 0, 0, 0);
 
   const upcoming = openDates
-    .filter((d) => new Date(d + 'T00:00:00') >= today)
+    .filter((d) => new Date(d + "T00:00:00") >= today)
     .sort();
 
   return (
