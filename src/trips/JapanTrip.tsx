@@ -248,24 +248,15 @@ const JapanTrip: React.FC = () => (
     <h1 className={styles.title}>Japan</h1>
     <p className={styles.overview}>{overview}</p>
 
-    <Section
-      title="Food"
-      blurb="We lined up at 4 AM for omakase at Toyosu, ate convenience store onigiri that had no right being that good, and had a Michelin-starred chef in Kyoto personally walk us through every course. Japan's food scene is unreal — whether it's a ¥400 udon bowl handmade in front of you or a seasonal kakigori that looks like art. We ate our way through Tokyo, Kyoto, and Osaka and honestly could've kept going."
-    >
+    <Section title="Food">
       <SpotGrid spots={food} />
     </Section>
 
-    <Section
-      title="Attractions"
-      blurb="We walked through thousands of vermilion torii gates at sunrise, got lost in teamLab's infinite digital rooms, and somehow ended up feeding wild monkeys on a mountain in Kyoto. From the quiet beauty of bamboo groves and golden temples to the pure chaos of DisneySea and Shibuya Crossing — every day felt like a completely different world. Japan knows how to make you feel something at every turn."
-    >
+    <Section title="Attractions">
       <SpotGrid spots={attractions} />
     </Section>
 
-    <Section
-      title="Places"
-      blurb="The kind of spots that don't always make the guidebooks but absolutely made our trip. We thrifted incredible pieces in Shimokitazawa, wandered through a three-story Tsutaya bookstore that felt like a library from a film, and got haircuts from the coolest English-speaking stylists in Tokyo. These are the moments that made Japan feel less like a vacation and more like a place we could actually live."
-    >
+    <Section title="Places">
       <SpotGrid spots={places} />
     </Section>
   </div>
