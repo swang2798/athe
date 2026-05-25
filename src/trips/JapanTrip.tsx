@@ -1,9 +1,9 @@
 import React from "react";
 import { Spot, SpotGrid, Section } from "./components";
-import styles from "../pages/styles/TripPage.module.css";
+import styles from "./styles/JapanTrip.module.css";
 
 const overview =
-  "September 2024 — Two weeks across Tokyo, Kyoto, and Osaka. A mix of temples, street food, and hidden cafes. " +
+  "September 2024 - " +
   "We stayed at APA Hotel Pride Kokkaigijidomae in Tokyo, Kyoto Arashiyama Onsen Kadensho in Kyoto, " +
   "and Villa Fontaine Grand Osaka-Umeda in Osaka.";
 
