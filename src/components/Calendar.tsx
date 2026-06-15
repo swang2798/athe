@@ -1,16 +1,12 @@
 import React from "react";
 import styles from "./Calendar.module.css";
 
-const openDates = [""];
+const openDates = ["2026-07-12"];
 const hours = "10 AM – 2 PM";
 
 const formatDate = (dateStr: string) => {
   const date = new Date(dateStr + "T00:00:00");
-  return date.toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-  });
+  return `${date.getMonth() + 1}.${date.getDate()}.${date.getFullYear()}`;
 };
 
 const Calendar: React.FC = () => {
@@ -27,7 +23,7 @@ const Calendar: React.FC = () => {
         upcoming.map((d) => (
           <p key={d} className={styles.date}>
             <span className={styles.dot} />
-            Next open: <strong>{formatDate(d)}</strong> · {hours}
+            At-home soft opening: <strong>{formatDate(d)}</strong> · {hours}
           </p>
         ))
       ) : (
