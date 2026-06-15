@@ -49,7 +49,8 @@
     font-size: 2rem;
   }
 
-  .grid {
+  .grid,
+  .gridPortrait {
     grid-template-columns: 1fr;
   }
 }

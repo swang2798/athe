@@ -51,6 +51,8 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  color: #2a5435;
+  padding: 0;
 }
 
 .backdrop {

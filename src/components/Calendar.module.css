@@ -9,10 +9,8 @@
   font-size: 1.15rem;
   color: #2a5435;
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .dot {
@@ -21,5 +19,12 @@
   border-radius: 50%;
   background: #7eb77f;
   display: inline-block;
-  flex-shrink: 0;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .date {
+    font-size: 1rem;
+  }
 }
