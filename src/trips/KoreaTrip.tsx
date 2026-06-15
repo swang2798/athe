@@ -4,10 +4,10 @@ import styles from "./styles/TaiwanTrip.module.css";
 const BASE = "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/travel/korea/";
 
 const landscape = [
-  "DSC02372.jpg", "DSC02375.jpg", "DSC02379.jpg",
-  "IMG_0719.jpg", "IMG_0724.jpg", "IMG_0752.jpg",
-  "IMG_0753.jpg", "IMG_0770.jpg", "IMG_0785.jpg",
-  "IMG_0789.jpg", "IMG_0930.jpg",
+  "DSC02372.jpg", "DSC02379.jpg", "IMG_0719.jpg",
+  "IMG_0724.jpg", "IMG_0752.jpg", "IMG_0753.jpg",
+  "IMG_0770.jpg", "IMG_0785.jpg", "IMG_0789.jpg",
+  "IMG_0930.jpg",
 ];
 
 const portrait = [
