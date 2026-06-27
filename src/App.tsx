@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TopNav from "./components/TopNav";
 import HomePage from "./pages/HomePage";
 import SoftOpenPage from "./pages/SoftOpenPage";
@@ -15,7 +15,7 @@ import styles from "./App.module.css";
 
 function App() {
   return (
-    <HashRouter basename="/">
+    <BrowserRouter>
       <div className={styles.appLayout}>
         <TopNav />
         <main className={styles.mainContent}>
@@ -32,7 +32,7 @@ function App() {
           </Routes>
         </main>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
