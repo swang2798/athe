@@ -10,22 +10,22 @@ interface MenuItem {
 const drinks: MenuItem[] = [
   {
     name: "Muscovado Latte",
-    price: "1",
+    price: "2",
     ingredients: "Espresso, muscovado sugar, steamed milk",
   },
   {
     name: "Blood Orange Latte",
-    price: "1",
+    price: "2",
     ingredients: "Espresso, blood orange syrup, steamed milk",
   },
   {
     name: "Rose Latte",
-    price: "1",
+    price: "2",
     ingredients: "Espresso, rose syrup, steamed milk",
   },
   {
     name: "Iced Matcha Latte",
-    price: "1",
+    price: "2",
     ingredients: "Ceremonial grade matcha, oat milk, syrup",
   },
 ];
@@ -33,17 +33,17 @@ const drinks: MenuItem[] = [
 const food: MenuItem[] = [
   {
     name: "Fuzhou Fish Balls",
-    price: "2",
+    price: "3",
     ingredients: "White fish, groud pork, fried shallot, oyster sauce",
   },
   {
     name: "Fuzhou Peanut Noodles",
-    price: "2",
+    price: "3",
     ingredients: "Wonton noodles, peanut butter, soy sauce, sesame oil, scallions",
   },
   {
     name: "Fuzhou Wontons",
-    price: "2",
+    price: "3",
     ingredients: "Ground pork, napa cabbage, oyster sauce, ginger",
   },
 ];
