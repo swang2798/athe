@@ -1,36 +1,14 @@
 import React from "react";
 import styles from "./Calendar.module.css";
 
-const openDates = ["2026-07-12"];
-const hours = "10 AM – 2 PM";
-
-const formatDate = (dateStr: string) => {
-  const date = new Date(dateStr + "T00:00:00");
-  return `${date.getMonth() + 1}.${date.getDate()}.${date.getFullYear()}`;
-};
-
-const Calendar: React.FC = () => {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  const upcoming = openDates
-    .filter((d) => new Date(d + "T00:00:00") >= today)
-    .sort();
-
-  return (
-    <div className={styles.banner}>
-      {upcoming.length > 0 ? (
-        upcoming.map((d) => (
-          <p key={d} className={styles.date}>
-            <span className={styles.dot} />
-            At-home soft opening: <strong>{formatDate(d)}</strong> · {hours}
-          </p>
-        ))
-      ) : (
-        <p className={styles.date}>No upcoming dates — check back soon!</p>
-      )}
-    </div>
-  );
-};
+const Calendar: React.FC = () => (
+  <div className={styles.banner}>
+    <img
+      src="https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/soft-open-flyer.png"
+      alt="Athe soft opening flyer"
+      className={styles.flyer}
+    />
+  </div>
+);
 
 export default Calendar;

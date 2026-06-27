@@ -109,7 +109,7 @@
 
 .tip {
   font-size: 0.95rem;
-  color: #2a5435;
+  color: #4F6B3A;
   line-height: 1.6;
   padding-left: 20px;
   position: relative;
@@ -119,7 +119,7 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: #7eb77f;
+  color: #A3CD4E;
 }
 
 /* Mobile masonry (hidden on desktop) */

@@ -1,5 +1,4 @@
 import React from "react";
-import Calendar from "../components/Calendar";
 import styles from "./styles/CafePage.module.css";
 
 interface MenuItem {
@@ -66,7 +65,6 @@ const MenuSection: React.FC<{ title: string; items: MenuItem[] }> = ({
 
 const CafePage: React.FC = () => (
   <>
-    <Calendar />
     <section>
       {/* Desktop: side-by-side table */}
       <table className={styles.menuTable}>

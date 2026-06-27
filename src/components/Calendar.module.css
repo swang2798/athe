@@ -2,29 +2,17 @@
   text-align: center;
   padding: 20px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #eee;
 }
 
-.date {
-  font-size: 1.15rem;
-  color: #2a5435;
-  margin: 0;
-  text-align: center;
-  line-height: 1.5;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #7eb77f;
-  display: inline-block;
-  margin-right: 8px;
-  vertical-align: middle;
+.flyer {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
-  .date {
-    font-size: 1rem;
+  .flyer {
+    max-width: 260px;
   }
 }

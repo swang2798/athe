@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import TopNav from "./components/TopNav";
 import HomePage from "./pages/HomePage";
+import SoftOpenPage from "./pages/SoftOpenPage";
 import CafePage from "./pages/CafePage";
 import CookingPage from "./pages/CookingPage";
 import TravelPage from "./pages/TravelPage";
@@ -19,7 +20,7 @@ function App() {
         <TopNav />
         <main className={styles.mainContent}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={new Date() < new Date("2026-07-13") ? <SoftOpenPage /> : <HomePage />} />
             <Route path="/cafe" element={<CafePage />} />
             <Route path="/cooking" element={<CookingPage />} />
             <Route path="/cooking/:id" element={<DishPage />} />

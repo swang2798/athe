@@ -22,7 +22,7 @@
   margin: 5px 0 0;
   padding: 0;
   text-align: left;
-  color: #2a5435;
+  color: #4F6B3A;
 }
 
 .thumb {
@@ -71,7 +71,7 @@
 }
 
 .tag {
-  background: #7eb77f;
+  background: #A3CD4E;
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
@@ -89,7 +89,7 @@
 
 .filterTag {
   background: #e0e0e0;
-  color: #2a5435;
+  color: #4F6B3A;
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
@@ -98,6 +98,6 @@
 }
 
 .filterTagActive {
-  background: #7eb77f;
+  background: #A3CD4E;
   color: white;
 }
