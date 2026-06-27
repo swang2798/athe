@@ -23,6 +23,11 @@ const drinks: MenuItem[] = [
     price: "1",
     ingredients: "Espresso, rose syrup, steamed milk",
   },
+  {
+    name: "Iced Matcha Latte",
+    price: "1",
+    ingredients: "Ceremonial grade matcha, oat milk, syrup",
+  },
 ];
 
 const food: MenuItem[] = [
