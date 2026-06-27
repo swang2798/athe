@@ -21,7 +21,7 @@
 
 .logo {
   font-size: 1.6rem;
-  color: #4F6B3A;
+  color: var(--plant-400);
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .linksDesktop a {
-  color: #4F6B3A;
+  color: var(--plant-400);
   text-decoration: none;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -42,7 +42,7 @@
 
 .linksDesktop a:hover,
 .linksDesktop a:global(.active) {
-  color: #A3CD4E;
+  color: var(--plant-200);
 }
 
 .toggle {
@@ -51,7 +51,7 @@
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  color: #4F6B3A;
+  color: var(--plant-400);
   padding: 0;
 }
 
@@ -70,7 +70,7 @@
   top: 50px;
   left: 0;
   right: 0;
-  background: #f0eee6;
+  background: var(--surface-0);
   padding: 20px;
   z-index: 100;
 }
@@ -84,7 +84,7 @@
 }
 
 .links a {
-  color: #4F6B3A;
+  color: var(--plant-400);
   text-decoration: none;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -94,7 +94,7 @@
 
 .links a:hover,
 .links a:global(.active) {
-  color: #A3CD4E;
+  color: var(--plant-200);
 }
 
 @media (max-width: 768px) {

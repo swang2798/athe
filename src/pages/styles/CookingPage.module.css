@@ -10,7 +10,7 @@
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  background: #f0eee6;
+  background: var(--surface-0);
 }
 
 .card {
@@ -22,7 +22,7 @@
   margin: 5px 0 0;
   padding: 0;
   text-align: left;
-  color: #4F6B3A;
+  color: var(--ink-primary);
 }
 
 .thumb {
@@ -37,7 +37,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(126, 183, 127, 0.6);
+  background: rgba(163, 205, 78, 0.5);
   opacity: 0;
   transition: opacity 0.2s;
   pointer-events: none;
@@ -71,8 +71,8 @@
 }
 
 .tag {
-  background: #A3CD4E;
-  color: white;
+  background: var(--accent-sunflower);
+  color: var(--ink-primary);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
@@ -88,8 +88,8 @@
 }
 
 .filterTag {
-  background: #e0e0e0;
-  color: #4F6B3A;
+  background: var(--surface-2);
+  color: var(--ink-primary);
   padding: 0.25rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
@@ -98,6 +98,6 @@
 }
 
 .filterTagActive {
-  background: #A3CD4E;
+  background: var(--plant-200);
   color: white;
 }

@@ -1,11 +1,11 @@
 .breadcrumbs {
   padding: 10px 20px;
   font-size: 0.85rem;
-  color: #666;
+  color: var(--ink-secondary);
 }
 
 .breadcrumbs a {
-  color: #666;
+  color: var(--ink-secondary);
   text-decoration: none;
 }
 

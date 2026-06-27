@@ -13,7 +13,7 @@
 }
 
 .row {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--air-200);
 }
 
 .cell {
@@ -30,24 +30,24 @@
 
 .name {
   font-size: 1rem;
-  color: #4F6B3A;
+  color: var(--ink-primary);
 }
 
 .price {
   font-size: 1rem;
-  color: #666;
+  color: var(--ink-secondary);
 }
 
 .ingredients {
   margin-top: 4px;
   font-size: 0.8rem;
-  color: #999;
+  color: var(--ink-muted);
 }
 
 .footnote {
   text-align: center;
   font-size: 0.8rem;
-  color: #999;
+  color: var(--ink-muted);
   margin-top: 30px;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .sectionRow {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--air-200);
   padding: 12px 10px;
 }
 

@@ -19,7 +19,7 @@
 
 .overview {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--ink-secondary);
   margin-bottom: 50px;
   line-height: 1.8;
   text-align: left;
@@ -46,7 +46,7 @@
 
 .sectionBlurb {
   font-size: 0.95rem;
-  color: #666;
+  color: var(--ink-secondary);
   text-align: left;
   max-width: 1050px;
   margin: 0 auto 30px;
@@ -72,7 +72,7 @@
 .spot {
   display: flex;
   flex-direction: column;
-  background: #faf9f6;
+  background: var(--surface-1);
   border-radius: 0;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
@@ -87,7 +87,7 @@
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
-  background: #f0eee6;
+  background: var(--surface-0);
   display: block;
 }
 
@@ -109,7 +109,7 @@
 
 .tip {
   font-size: 0.95rem;
-  color: #4F6B3A;
+  color: var(--ink-primary);
   line-height: 1.6;
   padding-left: 20px;
   position: relative;
@@ -119,7 +119,7 @@
   content: "→";
   position: absolute;
   left: 0;
-  color: #A3CD4E;
+  color: var(--plant-200);
 }
 
 /* Mobile masonry (hidden on desktop) */
