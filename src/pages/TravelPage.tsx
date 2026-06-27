@@ -6,7 +6,7 @@ import styles from "./styles/CookingPage.module.css";
 const TravelPage: React.FC = () => (
   <div className={styles.grid}>
     {trips.map((trip) => (
-      <Link key={trip.id} to={`/travel/${trip.id}`} className={styles.card}>
+      <Link key={trip.id} to={`/life/travel/${trip.id}`} className={styles.card}>
         <div className={styles.thumb}>
           <img src={trip.src} alt={trip.name} />
         </div>

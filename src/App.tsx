@@ -4,6 +4,7 @@ import TopNav from "./components/TopNav";
 import HomePage from "./pages/HomePage";
 import SoftOpenPage from "./pages/SoftOpenPage";
 import CafePage from "./pages/CafePage";
+import LifePage from "./pages/LifePage";
 import CookingPage from "./pages/CookingPage";
 import TravelPage from "./pages/TravelPage";
 import FashionPage from "./pages/FashionPage";
@@ -22,12 +23,13 @@ function App() {
           <Routes>
             <Route path="/" element={new Date() < new Date("2026-07-13") ? <SoftOpenPage /> : <HomePage />} />
             <Route path="/cafe" element={<CafePage />} />
-            <Route path="/cooking" element={<CookingPage />} />
-            <Route path="/cooking/:id" element={<DishPage />} />
-            <Route path="/travel" element={<TravelPage />} />
-            <Route path="/travel/:id" element={<TripPage />} />
-            <Route path="/fashion" element={<FashionPage />} />
-            <Route path="/music" element={<MusicPage />} />
+            <Route path="/life" element={<LifePage />} />
+            <Route path="/life/cooking" element={<CookingPage />} />
+            <Route path="/life/cooking/:id" element={<DishPage />} />
+            <Route path="/life/travel" element={<TravelPage />} />
+            <Route path="/life/travel/:id" element={<TripPage />} />
+            <Route path="/life/fashion" element={<FashionPage />} />
+            <Route path="/life/music" element={<MusicPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>

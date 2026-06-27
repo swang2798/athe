@@ -30,7 +30,7 @@ const CookingPage: React.FC = () => {
         {filtered.map((dish) => (
           <Link
             key={dish.id}
-            to={`/cooking/${dish.id}`}
+            to={`/life/cooking/${dish.id}`}
             className={styles.card}
           >
             <div className={styles.thumb}>
