@@ -5,18 +5,19 @@ const BASE = "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/travel/
 
 const landscape = [
   "DSC02372.jpg", "DSC02379.jpg", "IMG_0719.jpg",
-  "IMG_0724.jpg", "IMG_0752.jpg", "IMG_0753.jpg",
-  "IMG_0770.jpg", "IMG_0785.jpg", "IMG_0789.jpg",
-  "IMG_0930.jpg",
+  "IMG_0723.jpg", "IMG_0724.jpg", "IMG_0752.jpg",
+  "IMG_0753.jpg", "IMG_0770.jpg", "IMG_0785.jpg",
+  "IMG_0789.jpg", "IMG_0930.jpg",
 ];
 
 const portrait = [
   "IMG_0669.jpg", "IMG_0693.jpg", "IMG_0695.jpg",
-  "IMG_0705.jpg", "IMG_0729.jpg", "IMG_0734.jpg",
-  "IMG_0737.jpg", "IMG_0743.jpg", "IMG_0749.jpg",
-  "IMG_0760.jpg", "IMG_0767.jpg", "IMG_0791.jpg",
-  "IMG_0839.jpg", "IMG_0840.jpg", "IMG_0862.jpg",
-  "IMG_0867.jpg", "IMG_0962.jpg", "IMG_0971.jpg",
+  "IMG_0701.jpg", "IMG_0705.jpg", "IMG_0729.jpg",
+  "IMG_0734.jpg", "IMG_0737.jpg", "IMG_0743.jpg",
+  "IMG_0749.jpg", "IMG_0760.jpg", "IMG_0767.jpg",
+  "IMG_0783.jpg", "IMG_0791.jpg", "IMG_0839.jpg",
+  "IMG_0840.jpg", "IMG_0862.jpg", "IMG_0867.jpg",
+  "IMG_0960.jpg", "IMG_0962.jpg", "IMG_0971.jpg",
 ];
 
 const chunk = <T, >(arr: T[], size: number): T[][] => {
@@ -28,6 +29,7 @@ const chunk = <T, >(arr: T[], size: number): T[][] => {
 const KoreaTrip: React.FC = () => (
   <div className={styles.page}>
     <h1 className={styles.title}>South Korea</h1>
+    <p className={styles.overview}>January 2025</p>
     {chunk(landscape, 9).map((grid, gi) => (
       <div key={`l-${gi}`} className={styles.grid}>
         {grid.map((file, i) => (

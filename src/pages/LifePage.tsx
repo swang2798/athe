@@ -10,15 +10,17 @@ const categories = [
 ];
 
 const LifePage: React.FC = () => (
-  <ul className={styles.list}>
-    {categories.map((cat) => (
-      <li key={cat.id}>
-        <Link to={`/life/${cat.id}`} className={styles.link}>
-          {cat.name}
-        </Link>
-      </li>
-    ))}
-  </ul>
+  <div className={styles.page}>
+    <ul className={styles.list}>
+      {categories.map((cat) => (
+        <li key={cat.id}>
+          <Link to={`/life/${cat.id}`} className={styles.link}>
+            {cat.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
 );
 
 export default LifePage;

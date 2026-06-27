@@ -70,7 +70,7 @@ const MenuSection: React.FC<{ title: string; items: MenuItem[] }> = ({
 
 const CafePage: React.FC = () => (
   <>
-    <section>
+<section>
       {/* Desktop: side-by-side table */}
       <table className={styles.menuTable}>
         <thead>

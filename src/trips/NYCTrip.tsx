@@ -24,8 +24,8 @@ const portrait = [
   "IMG_2101.jpg", "IMG_2109.jpg", "IMG_2132.jpg",
   "IMG_2147.jpg", "IMG_2149.jpg", "IMG_2151.jpg",
   "IMG_2157.jpg", "IMG_2167.jpg", "IMG_2176.jpg",
-  "IMG_2184.jpg", "IMG_2185.jpg", "IMG_2186.jpg",
-  "IMG_2187.jpg", "IMG_2194.jpg", "IMG_2205.jpg",
+  "IMG_2185.jpg",
+  "IMG_2194.jpg", "IMG_2205.jpg",
   "IMG_2209.jpg", "IMG_2219.jpg", "IMG_6777.jpg",
   "IMG_6784.jpg", "IMG_6790.jpg", "IMG_6824.jpg",
   "IMG_6857.jpg", "IMG_6879.jpg", "IMG_6893.jpg",
@@ -43,6 +43,7 @@ const chunk = <T, >(arr: T[], size: number): T[][] => {
 const NYCTrip: React.FC = () => (
   <div className={styles.page}>
     <h1 className={styles.title}>New York City</h1>
+    <p className={styles.overview}>March 2026</p>
     {chunk(landscape, 9).map((grid, gi) => (
       <div key={`l-${gi}`} className={styles.grid}>
         {grid.map((file, i) => (

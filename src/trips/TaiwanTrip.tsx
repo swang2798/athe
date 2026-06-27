@@ -14,10 +14,10 @@ const landscape = [
 const portrait = [
   "IMG_0295.png", "IMG_0298.png", "IMG_0313.png",
   "IMG_0328.png", "IMG_0449.png", "IMG_0493.png",
-  "IMG_0620.png", "IMG_0871.png", "IMG_0883.png",
-  "IMG_0889.png", "IMG_0898.png", "IMG_4172.png",
-  "IMG_0348.png", "IMG_0354.png", "IMG_0397.png",
-  "IMG_0351.jpg"
+  "IMG_0620.png", "IMG_0683.jpg", "IMG_0871.png",
+  "IMG_0883.png", "IMG_0889.png", "IMG_0898.png",
+  "IMG_4172.png", "IMG_0348.png", "IMG_0354.png",
+  "IMG_0397.png", "IMG_0351.jpg",
 ];
 
 const chunk = <T, >(arr: T[], size: number): T[][] => {
@@ -29,6 +29,7 @@ const chunk = <T, >(arr: T[], size: number): T[][] => {
 const TaiwanTrip: React.FC = () => (
   <div className={styles.page}>
     <h1 className={styles.title}>Taiwan</h1>
+    <p className={styles.overview}>January 2025</p>
     {chunk(landscape, 9).map((grid, gi) => (
       <div key={`l-${gi}`} className={styles.grid}>
         {grid.map((file, i) => (
