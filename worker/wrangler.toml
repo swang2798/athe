@@ -1,0 +1,13 @@
+name = "cafe-reservations"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+workers_dev = true
+
+[[routes]]
+pattern = "everydayathe.com/api/*"
+zone_name = "everydayathe.com"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cafe-reservations"
+database_id = "7e21d5f7-0748-40b6-a7a8-ef7694ba3299"

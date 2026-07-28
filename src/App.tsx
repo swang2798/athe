@@ -11,6 +11,8 @@ import FashionPage from "./pages/FashionPage";
 import MusicPage from "./pages/MusicPage";
 import DishPage from "./pages/DishPage";
 import TripPage from "./pages/TripPage";
+import ReservePage from "./pages/ReservePage";
+import AdminPage from "./pages/AdminPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import styles from "./App.module.css";
 
@@ -23,6 +25,8 @@ function App() {
           <Routes>
             <Route path="/" element={new Date() < new Date("2026-07-13") ? <SoftOpenPage /> : <HomePage />} />
             <Route path="/cafe" element={<CafePage />} />
+            <Route path="/cafe/reserve" element={<ReservePage />} />
+            <Route path="/admin" element={<AdminPage />} />
             <Route path="/life" element={<LifePage />} />
             <Route path="/life/cooking" element={<CookingPage />} />
             <Route path="/life/cooking/:id" element={<DishPage />} />

@@ -1,0 +1,144 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.loginForm {
+  display: flex;
+  gap: 8px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--air-200);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--surface-0);
+  color: var(--ink-primary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--plant-300);
+}
+
+.loginBtn {
+  padding: 10px 20px;
+  background: var(--plant-300);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  background: var(--plant-400);
+}
+
+.error {
+  color: var(--accent-poppy);
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.loading,
+.empty {
+  text-align: center;
+  color: var(--ink-muted);
+}
+
+/* Slot groups */
+.slotGroup {
+  margin-bottom: 24px;
+}
+
+.slotHeader {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--air-200);
+}
+
+.slotTotal {
+  color: var(--ink-muted);
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+
+.table th {
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+  padding: 4px 8px;
+}
+
+.table td {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--surface-2);
+}
+
+.table code {
+  background: var(--surface-1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+.deleteBtn {
+  padding: 4px 10px;
+  background: none;
+  border: 1px solid var(--accent-poppy);
+  color: var(--accent-poppy);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background: var(--accent-poppy);
+  color: white;
+}
+
+.refreshBtn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background: var(--surface-1);
+  border: 1px solid var(--air-200);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.refreshBtn:hover {
+  background: var(--surface-2);
+}

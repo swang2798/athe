@@ -1,0 +1,225 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--ink-secondary);
+  margin-bottom: 4px;
+}
+
+.note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-bottom: 30px;
+}
+
+.noEvent {
+  text-align: center;
+  color: var(--ink-secondary);
+}
+
+.loading {
+  text-align: center;
+  color: var(--ink-muted);
+}
+
+/* Confirmation card */
+.confirmation {
+  background: var(--water-50);
+  border: 1px solid var(--water-300);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.confirmation h3 {
+  color: var(--plant-400);
+  margin-bottom: 8px;
+}
+
+.confirmation p {
+  margin-bottom: 6px;
+}
+
+.code {
+  margin-top: 12px;
+}
+
+.code code {
+  background: var(--surface-1);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+.codeHint {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+/* Slot picker */
+.slots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.slot {
+  border: 1px solid var(--air-200);
+  border-radius: 8px;
+  padding: 14px 12px;
+  background: var(--surface-0);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.slot:hover:not(:disabled) {
+  border-color: var(--plant-300);
+}
+
+.slotSelected {
+  border-color: var(--plant-300);
+  background: var(--water-50);
+}
+
+.slotDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slotTime {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-primary);
+}
+
+.slotSeats {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+/* Form fields */
+.form {
+  margin-bottom: 30px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  gap: 4px;
+}
+
+.input,
+.select {
+  padding: 10px 12px;
+  border: 1px solid var(--air-200);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--surface-0);
+  color: var(--ink-primary);
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--plant-300);
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--plant-300);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--plant-400);
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--accent-poppy);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Lookup section */
+.lookup {
+  border-top: 1px solid var(--air-200);
+  padding-top: 24px;
+}
+
+.lookup h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.lookupForm {
+  display: flex;
+  gap: 8px;
+}
+
+.lookupBtn {
+  padding: 10px 16px;
+  background: var(--surface-1);
+  border: 1px solid var(--air-200);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lookupBtn:hover {
+  background: var(--surface-2);
+}
+
+@media (max-width: 768px) {
+  .slots {
+    grid-template-columns: 1fr;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./styles/CafePage.module.css";
 
 interface MenuItem {
@@ -118,6 +119,9 @@ const CafePage: React.FC = () => (
       </div>
 
       <p className={styles.footnote}>All milk is lactose free.</p>
+      <p className={styles.reserveLink}>
+        <Link to="/cafe/reserve">Reserve a slot →</Link>
+      </p>
     </section>
   </>
 );

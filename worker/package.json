@@ -1,0 +1,16 @@
+{
+  "name": "cafe-reservations-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.5.0",
+    "@cloudflare/workers-types": "^5.0.0",
+    "vitest": "^2.1.0",
+    "wrangler": "^4.0.0"
+  }
+}
