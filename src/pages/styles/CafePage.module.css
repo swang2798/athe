@@ -1,25 +1,18 @@
-.menuTable {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-collapse: collapse;
+.menuSection {
+  max-width: 500px;
+  margin: 0 auto 30px;
 }
 
-.heading {
+.sectionHeading {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 0 20px 15px;
+  margin-bottom: 10px;
 }
 
-.row {
+.sectionRow {
   border-top: 1px solid var(--air-200);
-}
-
-.cell {
-  padding: 15px 40px;
-  width: 50%;
-  vertical-align: top;
+  padding: 12px 10px;
 }
 
 .item {
@@ -51,37 +44,6 @@
   margin-top: 30px;
 }
 
-@media (max-width: 768px) {
-  .menuTable {
-    display: none;
-  }
-
-  .cell {
-    padding: 12px 10px;
-  }
-}
-
-/* Mobile stacked layout */
-.menuStacked {
-  display: none;
-}
-
-.menuSection {
-  margin-bottom: 30px;
-}
-
-.sectionHeading {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.sectionRow {
-  border-top: 1px solid var(--air-200);
-  padding: 12px 10px;
-}
-
 .reserveLink {
   text-align: center;
   margin-top: 20px;
@@ -96,10 +58,4 @@
 
 .reserveLink a:hover {
   text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .menuStacked {
-    display: block;
-  }
 }

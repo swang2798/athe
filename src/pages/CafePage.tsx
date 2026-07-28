@@ -31,25 +31,6 @@ const drinks: MenuItem[] = [
   },
 ];
 
-const food: MenuItem[] = [
-  {
-    name: "Fuzhou Fish Balls",
-    price: "3",
-    ingredients: "White fish, groud pork, fried shallot, oyster sauce",
-  },
-  {
-    name: "Fuzhou Peanut Noodles",
-    price: "3",
-    ingredients: "Wonton noodles, peanut butter, soy sauce, sesame oil, scallions",
-  },
-  {
-    name: "Fuzhou Wontons",
-    price: "3",
-    ingredients: "Ground pork, napa cabbage, oyster sauce, ginger",
-  },
-];
-
-const maxRows = Math.max(drinks.length, food.length);
 
 const MenuSection: React.FC<{ title: string; items: MenuItem[] }> = ({
   title,
@@ -71,53 +52,8 @@ const MenuSection: React.FC<{ title: string; items: MenuItem[] }> = ({
 
 const CafePage: React.FC = () => (
   <>
-<section>
-      {/* Desktop: side-by-side table */}
-      <table className={styles.menuTable}>
-        <thead>
-          <tr>
-            <th className={styles.heading}>Drinks</th>
-            <th className={styles.heading}>Food</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Array.from({ length: maxRows }).map((_, i) => (
-            <tr key={i} className={styles.row}>
-              <td className={styles.cell}>
-                {drinks[i] && (
-                  <>
-                    <div className={styles.item}>
-                      <span className={styles.name}>{drinks[i].name}</span>
-                      <span className={styles.price}>{drinks[i].price}</span>
-                    </div>
-                    <p className={styles.ingredients}>
-                      {drinks[i].ingredients}
-                    </p>
-                  </>
-                )}
-              </td>
-              <td className={styles.cell}>
-                {food[i] && (
-                  <>
-                    <div className={styles.item}>
-                      <span className={styles.name}>{food[i].name}</span>
-                      <span className={styles.price}>{food[i].price}</span>
-                    </div>
-                    <p className={styles.ingredients}>{food[i].ingredients}</p>
-                  </>
-                )}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {/* Mobile: stacked sections */}
-      <div className={styles.menuStacked}>
-        <MenuSection title="Drinks" items={drinks} />
-        <MenuSection title="Food" items={food} />
-      </div>
-
+    <section>
+      <MenuSection title="Drinks" items={drinks} />
       <p className={styles.footnote}>All milk is lactose free.</p>
       <p className={styles.reserveLink}>
         <Link to="/cafe/reserve">Reserve a slot →</Link>
