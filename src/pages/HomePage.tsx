@@ -25,10 +25,7 @@ const HomePage: React.FC = () => {
       <h1 className={styles.visuallyHidden}>athe</h1>
       <header className={styles.seasonNav}>
         <p>
-          athe{" "}
-          <span>
-            / {latestSeason.edition}.{latestSeason.label}
-          </span>
+          {latestSeason.edition}.{latestSeason.label}
         </p>
       </header>
 
