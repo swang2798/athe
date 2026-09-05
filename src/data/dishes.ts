@@ -14,13 +14,13 @@ export interface Dish {
 export const dishes: Dish[] = [
   {
     id: "steamed-egg-with-minced-pork",
-    src: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/thumb.jpg",
+    src: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/thumb.webp",
     name: "Steamed Egg with Minced Pork",
     tags: ["Dinner", "Lunch"],
     images: [
-      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/thumb.jpg",
-      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/2.jpg",
-      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/3.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/thumb.webp",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/2.webp",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/3.webp",
     ],
     video:
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/steamed-egg-with-minced-pork/video.mp4",
@@ -46,7 +46,7 @@ export const dishes: Dish[] = [
     tags: ["Drinks"],
     images: [
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/thumb.mp4",
-      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/2.png",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/2.webp",
       //"https://res.cloudinary.com/dlenbkeui/video/upload/q_auto/v1772075787/IMG_1731_n5t9d2.mov",
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/iced-matcha-latte/3.mp4",
     ],
@@ -77,13 +77,13 @@ export const dishes: Dish[] = [
   },
   {
     id: "cola-ribs",
-    src: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/thumb.jpg",
+    src: "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/thumb.webp",
     name: "Cola and Soy Glazed Ribs",
     tags: ["Dinner"],
     images: [
-      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/thumb.jpg",
-      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/2.jpg",
-      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/3.jpg",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/thumb.webp",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/2.webp",
+      "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/3.webp",
     ],
     video:
       "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/cooking/cola-ribs/video.mp4",
