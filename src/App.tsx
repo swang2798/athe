@@ -13,6 +13,8 @@ import DishPage from "./pages/DishPage";
 import TripPage from "./pages/TripPage";
 import ReservePage from "./pages/ReservePage";
 import AdminPage from "./pages/AdminPage";
+import ArchivePage from "./pages/ArchivePage";
+import ArchiveSeasonPage from "./pages/ArchiveSeasonPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import styles from "./App.module.css";
 
@@ -33,6 +35,8 @@ function App() {
                 )
               }
             />
+            <Route path="/archive" element={<ArchivePage />} />
+            <Route path="/archive/:seasonId" element={<ArchiveSeasonPage />} />
             <Route path="/cafe" element={<CafePage />} />
             <Route path="/cafe/reserve" element={<ReservePage />} />
             <Route path="/admin" element={<AdminPage />} />

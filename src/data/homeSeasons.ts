@@ -12,3 +12,7 @@ export const homeSeasons = [
 ] as const;
 
 export type HomeSeasonId = (typeof homeSeasons)[number]["id"];
+export type HomeSeason = (typeof homeSeasons)[number];
+
+export const latestHomeSeason = homeSeasons[homeSeasons.length - 1];
+export const archivedHomeSeasons = homeSeasons.slice(0, -1);

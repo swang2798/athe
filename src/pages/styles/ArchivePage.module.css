@@ -1,0 +1,44 @@
+.page {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.link {
+  color: var(--plant-400);
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.17em;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--plant-200);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
