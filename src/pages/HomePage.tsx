@@ -1,96 +1,40 @@
-import React, { useState, useMemo, useRef, useCallback } from "react";
+import React from "react";
+import AW26Season from "../components/home/AW26Season";
+import SS26Season from "../components/home/SS26Season";
+import { homeSeasons, HomeSeasonId } from "../data/homeSeasons";
 import styles from "./styles/HomePage.module.css";
 
-const images = [
-  "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-1.png",
-  "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-2.png",
-  "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-3.png",
-  "https://pub-e607f1b3e5cd407c80ae57baa3c09ecc.r2.dev/assets/home/scanned-document-4.png",
-];
+type SeasonComponentProps = {
+  label: string;
+};
+
+const seasonComponents: Record<
+  HomeSeasonId,
+  React.ComponentType<SeasonComponentProps>
+> = {
+  ss26: SS26Season,
+  aw26: AW26Season,
+};
 
 const HomePage: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const initialPositions = useMemo(() => {
-    const count = images.length;
-    const cols = Math.ceil(Math.sqrt(count));
-    const rows = Math.ceil(count / cols);
-    const cellW = 60 / cols,
-      cellH = 60 / rows;
-    return images.map((_, i) => ({
-      xPct: 10 + (i % cols) * cellW + Math.random() * (cellW - 15),
-      yPct: 5 + Math.floor(i / cols) * cellH + Math.random() * (cellH - 15),
-      rotate: Math.random() * 20 - 10,
-    }));
-  }, []);
-
-  const [positions, setPositions] = useState(initialPositions);
-  const [dragging, setDragging] = useState<number | null>(null);
-  const offsetRef = useRef({ x: 0, y: 0 });
-  const [zIndices, setZIndices] = useState(() => images.map((_, i) => i));
-  const [maxZ, setMaxZ] = useState(images.length);
-
-  const toLocal = useCallback((clientX: number, clientY: number) => {
-    const rect = containerRef.current!.getBoundingClientRect();
-    return { x: clientX - rect.left, y: clientY - rect.top };
-  }, []);
-
-  const handleMouseDown = (i: number, e: React.MouseEvent) => {
-    const rect = containerRef.current!.getBoundingClientRect();
-    const localX = e.clientX - rect.left;
-    const localY = e.clientY - rect.top;
-    const posX = (positions[i].xPct / 100) * rect.width;
-    const posY = (positions[i].yPct / 100) * rect.height;
-    offsetRef.current = { x: localX - posX, y: localY - posY };
-    setDragging(i);
-    const newZ = maxZ + 1;
-    setMaxZ(newZ);
-    setZIndices((z) => z.map((val, idx) => (idx === i ? newZ : val)));
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (dragging === null) return;
-    const rect = containerRef.current!.getBoundingClientRect();
-    const local = toLocal(e.clientX, e.clientY);
-    setPositions((pos) =>
-      pos.map((p, i) =>
-        i === dragging
-          ? {
-              ...p,
-              xPct: ((local.x - offsetRef.current.x) / rect.width) * 100,
-              yPct: ((local.y - offsetRef.current.y) / rect.height) * 100,
-            }
-          : p,
-      ),
-    );
-  };
-
-  const handleMouseUp = () => setDragging(null);
+  const latestSeason = homeSeasons[homeSeasons.length - 1];
+  const LatestSeason = seasonComponents[latestSeason.id];
 
   return (
-    <div
-      ref={containerRef}
-      className={styles.scatter}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-    >
-      {images.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt=""
-          draggable={false}
-          onMouseDown={(e) => handleMouseDown(i, e)}
-          style={{
-            left: `${positions[i].xPct}%`,
-            top: `${positions[i].yPct}%`,
-            transform: `rotate(${positions[i].rotate}deg)`,
-            cursor: "grab",
-            zIndex: zIndices[i],
-          }}
-        />
-      ))}
+    <div className={styles.home}>
+      <h1 className={styles.visuallyHidden}>athe</h1>
+      <header className={styles.seasonNav}>
+        <p>
+          athe{" "}
+          <span>
+            / {latestSeason.edition}.{latestSeason.label}
+          </span>
+        </p>
+      </header>
+
+      <div className={styles.seasonContent}>
+        <LatestSeason label={latestSeason.label} />
+      </div>
     </div>
   );
 };

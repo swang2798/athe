@@ -23,7 +23,16 @@ function App() {
         <TopNav />
         <main className={styles.mainContent}>
           <Routes>
-            <Route path="/" element={new Date() < new Date("2026-07-13") ? <SoftOpenPage /> : <HomePage />} />
+            <Route
+              path="/"
+              element={
+                new Date() < new Date("2026-07-13") ? (
+                  <SoftOpenPage />
+                ) : (
+                  <HomePage />
+                )
+              }
+            />
             <Route path="/cafe" element={<CafePage />} />
             <Route path="/cafe/reserve" element={<ReservePage />} />
             <Route path="/admin" element={<AdminPage />} />
