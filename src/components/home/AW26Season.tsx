@@ -21,6 +21,7 @@ type Point = {
 };
 
 const TAU = Math.PI * 2;
+const DOT_SCALE = 1;
 
 const seededRandom = (seed: number) => {
   const value = Math.sin(seed * 12.9898) * 43758.5453;
@@ -40,7 +41,7 @@ const createPoints = (width: number, height: number): Point[] => {
   const isSmall = width < 700;
   const fieldWidth = Math.min(width * (isSmall ? 0.88 : 0.8), 980);
   const fieldHeight = Math.min(height * 0.56, isSmall ? 300 : 420);
-  const gap = isSmall ? 11 : 12;
+  const gap = (isSmall ? 11 : 12) * DOT_SCALE;
   const columns = Math.max(24, Math.floor(fieldWidth / gap));
   const rows = Math.max(18, Math.floor(fieldHeight / gap));
   const count = columns * rows;
@@ -122,7 +123,7 @@ const createPoints = (width: number, height: number): Point[] => {
       targetY: target.y,
       phase: seededRandom(index + 18) * TAU,
       phaseY: seededRandom(index + 29) * TAU,
-      size: 0.75 + seededRandom(index + 44) * 1.15,
+      size: (0.75 + seededRandom(index + 44) * 1.15) * DOT_SCALE,
       speedX: 0.0028 + seededRandom(index + 91) * 0.0027,
       speedY: 0.0032 + seededRandom(index + 139) * 0.0025,
       tremorX: 0.006 + seededRandom(index + 117) * 0.002,
